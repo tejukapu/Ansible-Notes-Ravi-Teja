@@ -1,10 +1,13 @@
 we write modules for each of the service in aws so that they can recall it in source field without writing from scratch, 
-in real time organization we were writing all the things in vs code only there we use built in plugins for terraform and aws and ansible so it will be easy for us, see we have one brach where we have all modules are written so we will simply call those modules when we write the terraform project code, and we will pass the our own .tfvar values by creating one tf.var file thats it terraform become dead easy for me, see first we need to have main.tf file where we have provider details and we have variable file where we are refering variabls in main.tf for resources, and we have .tfvar for values for the variables and we have output.tf to print resouece things like ip and ids thats it.
+in real time organization we were writing all the things in vs code only there we use built in plugins for terraform and aws and ansible so it will be easy for us, see we have one brach where we have all modules are written so we will simply call those modules when we write the terraform project code, and we will pass the our own .tfvar values by creating one tf.var file thats it terraform become dead easy for me, see first we need to have main.tf file where we have provider details and we have variable file where we are refering variabls in main.tf for resources, and we have .TFVAR for values for the variables and we have output.tf to print resouece things like ip and ids thats it.
 
 We have devops team of 5 members, we used to write terrafrom code and stored in github and we store state file in s3 as a remote backend, so when ever need change i will clone the repo and make changes and verify by applay command raise a pull request PR once pr approved we have new terraform project in github in the same way once we use applay it automatically update statefile in s3.
 
 Provisioners:-
 this is very simple refer provision.md doc my boss, 
+
+Drift:
+see if we have alredy resource in aws now we need to import those thing in to state or terrafrom so we use "TERRAFORM IMPORT - CMD"
 
 Workspaces:-
 this is very important like we have diffrent environments right dev qa and prod, there how we can manage different env in a single terrafom by using workspaces so hear we simply have one terrafom folder inside the folder we create workspaces by using terafom workspace new dev or staging, so that in every workspace we have diffrent statefile separately without hardcode in root statefile, so once we have created workspace we initilize terraform init, then one new statefile will be created for that workspace separately
