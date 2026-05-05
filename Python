@@ -1,0 +1,85 @@
+#Length
+test = "hey ravi teja"
+total = len(test)
+print(total, "this many letters are there in your name")
+
+#concat
+var1 ="Ravi"
+var2 ="Teja"
+result =var1+" "+var2
+print (result)
+
+#Lower,Upper
+text = "Ravi Teja Gowda"
+Upper = text.upper()
+Lower = text.lower()
+
+print("Uppercase = ", Upper)
+print("Lowercase = ", Lower)
+
+#Replace string
+var= "Ravi"
+Replace = var.replace("Ravi", "Teju")
+print ("replaced text to Teju: ", Replace)
+
+#split
+var3 = "Ravi teja is osm"
+split =var3.split()
+print(split)
+
+#strip
+var4 = " some space around  "
+strip = var4.strip()
+print(strip)
+print (var4)
+
+#substring
+
+var5 = "ravi is awesome"
+hey ="is"
+if hey in var5:
+    print("we found in var5= ",hey)
+#Mathematical operations
+
+var6 = 5.0
+var7 = 6.0
+
+addition = var6+var7
+print(addition)
+
+substraction = var6 - var7
+print(substraction)
+
+multiplication = var6 * var7
+print(multiplication)
+
+division= var6 / var7
+print(division)
+
+var8 = 5.32000
+around =round(var8, 2) #round to 2 decimal places
+print( around)
+
+#integer value
+var9 = 10
+var10 = 5
+
+#integer division
+result1 = var9 // var10
+print (result1)
+
+#modules (reminder)
+result2 = var9 % var10
+print (result2)
+
+#absolute value
+result3 = abs(-7)
+print("Absolute Value:", result3)
+
+#The re module is a built-in Python library. You don't need to install anything extra to use it. It provides a set of functions that allow you to check if a string contains a specific search pattern.
+#In DevOps and general programming, you often deal with messy text data—log files, configuration settings, or user input. We use re because:
+
+import re
+
+server_Log = "ravi teja is great, but have error which is in past not now"
+pattern =r"great"
